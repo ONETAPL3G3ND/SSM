@@ -14,17 +14,25 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%SSM/server/grpcproto/MainServer.proto\"!\n\x0fMessageResponse\x12\x0e\n\x06Status\x18\x01 \x01(\x05\"#\n\x07Message\x12\x0c\n\x04Text\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\x05\x32\x37\n\nMainServer\x12)\n\x0bSendMessage\x12\x08.Message\x1a\x10.MessageResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n%SSM/server/grpcproto/MainServer.proto\"%\n\x11\x43reateAccountData\x12\x10\n\x08Username\x18\x01 \x01(\t\"$\n\x13\x41\x63\x63ountDataResponse\x12\r\n\x05Token\x18\x01 \x01(\t\"!\n\x0fMessageResponse\x12\x0e\n\x06Status\x18\x01 \x01(\x05\"#\n\x07Message\x12\x0c\n\x04Text\x18\x01 \x01(\t\x12\n\n\x02ID\x18\x02 \x01(\x05\"$\n\x13\x43heckMessageRequest\x12\r\n\x05Token\x18\x01 \x01(\t\"\'\n\x13\x43heckMessageRespons\x12\x10\n\x08Messages\x18\x01 \x03(\t2\xae\x01\n\nMainServer\x12)\n\x0bSendMessage\x12\x08.Message\x1a\x10.MessageResponse\x12\x39\n\rCreateAccount\x12\x12.CreateAccountData\x1a\x14.AccountDataResponse\x12:\n\x0c\x43heckMessage\x12\x14.CheckMessageRequest\x1a\x14.CheckMessageResponsb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'SSM.server.grpcproto.MainServer_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
-  _globals['_MESSAGERESPONSE']._serialized_start=41
-  _globals['_MESSAGERESPONSE']._serialized_end=74
-  _globals['_MESSAGE']._serialized_start=76
-  _globals['_MESSAGE']._serialized_end=111
-  _globals['_MAINSERVER']._serialized_start=113
-  _globals['_MAINSERVER']._serialized_end=168
+  _globals['_CREATEACCOUNTDATA']._serialized_start=41
+  _globals['_CREATEACCOUNTDATA']._serialized_end=78
+  _globals['_ACCOUNTDATARESPONSE']._serialized_start=80
+  _globals['_ACCOUNTDATARESPONSE']._serialized_end=116
+  _globals['_MESSAGERESPONSE']._serialized_start=118
+  _globals['_MESSAGERESPONSE']._serialized_end=151
+  _globals['_MESSAGE']._serialized_start=153
+  _globals['_MESSAGE']._serialized_end=188
+  _globals['_CHECKMESSAGEREQUEST']._serialized_start=190
+  _globals['_CHECKMESSAGEREQUEST']._serialized_end=226
+  _globals['_CHECKMESSAGERESPONS']._serialized_start=228
+  _globals['_CHECKMESSAGERESPONS']._serialized_end=267
+  _globals['_MAINSERVER']._serialized_start=270
+  _globals['_MAINSERVER']._serialized_end=444
 # @@protoc_insertion_point(module_scope)
