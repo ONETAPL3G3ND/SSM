@@ -1,7 +1,13 @@
 syntax = "proto3";
 
 
+message CreateAccountData {
+  string Username = 1;
+}
 
+message  AccountDataResponse {
+  string Token = 1;
+}
 
 message MessageResponse {
   int32 Status = 1;
@@ -12,7 +18,16 @@ message Message {
   int32  ID = 2;
 }
 
+message CheckMessageRequest {
+  string Token = 1;
+}
+
+message CheckMessageRespons {
+  repeated string Messages = 1;
+}
 
 service MainServer  {
   rpc SendMessage(Message) returns (MessageResponse);
+  rpc CreateAccount(CreateAccountData) returns (AccountDataResponse);
+  rpc CheckMessage (CheckMessageRequest) returns (CheckMessageRespons);
 }
